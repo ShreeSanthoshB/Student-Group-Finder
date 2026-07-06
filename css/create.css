@@ -1,0 +1,540 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eef4ff;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+}
+
+.logo img{
+
+    width:50px;
+    height:50px;
+
+}
+
+.logo h2{
+
+    color:#2563eb;
+    font-size:26px;
+
+}
+
+.nav-links{
+
+    display:flex;
+    list-style:none;
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-links a:hover,
+.nav-links .active{
+
+    color:#2563eb;
+
+}
+
+.logout-btn{
+
+    text-decoration:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 26px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    padding:150px 8% 70px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+
+    color:white;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    opacity:.95;
+
+}
+
+/* ===========================
+   FORM SECTION
+=========================== */
+
+.form-section{
+
+    width:90%;
+
+    max-width:850px;
+
+    margin:70px auto;
+
+}
+
+.form-header{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.form-header h2{
+
+    font-size:38px;
+
+    color:#1e3a8a;
+
+    margin-bottom:12px;
+
+}
+
+.form-header p{
+
+    color:#555;
+
+    font-size:17px;
+
+}
+
+.group-form{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.input-box{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:25px;
+
+}
+
+.input-box label{
+
+    font-weight:600;
+
+    color:#1e3a8a;
+
+    margin-bottom:10px;
+
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+textarea{
+
+    resize:none;
+
+}
+
+.full-width{
+
+    width:100%;
+
+}
+
+.create-btn{
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.create-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 20px rgba(37,99,235,.25);
+
+}
+
+/* ===========================
+   QUOTE
+=========================== */
+
+.quote{
+
+    margin-top:70px;
+
+    padding:80px 8%;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    color:white;
+
+}
+
+.quote h2{
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.quote p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    opacity:.95;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.footer-content h3{
+
+    color:#60a5fa;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    margin:10px 0;
+
+    color:#d1d5db;
+
+}
+
+.footer-content hr{
+
+    width:180px;
+
+    margin:20px auto;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+   SCROLL BUTTONS
+=========================== */
+
+#topBtn,
+#bottomBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+#topBtn{
+
+    bottom:90px;
+
+}
+
+#bottomBtn{
+
+    bottom:25px;
+
+}
+
+#topBtn:hover,
+#bottomBtn:hover{
+
+    background:#1d4ed8;
+
+    transform:scale(1.1);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px;
+
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:20px;
+
+    }
+
+    .hero{
+
+        padding-top:190px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .hero h1{
+
+        font-size:36px;
+
+    }
+
+    .hero p{
+
+        font-size:16px;
+
+    }
+
+    .form-section{
+
+        width:95%;
+
+    }
+
+    .group-form{
+
+        padding:30px 22px;
+
+    }
+
+    .form-header h2{
+
+        font-size:30px;
+
+    }
+
+    .quote{
+
+        padding:60px 20px;
+
+    }
+
+    .quote h2{
+
+        font-size:30px;
+
+    }
+
+    .quote p{
+
+        font-size:16px;
+
+    }
+
+    .footer-content h3{
+
+        font-size:26px;
+
+    }
+
+    .footer-content p{
+
+        font-size:15px;
+
+    }
+
+}

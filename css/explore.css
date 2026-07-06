@@ -1,0 +1,603 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eef4ff;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+}
+
+.logo h2{
+    color:#2563eb;
+    font-size:26px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active{
+    color:#2563eb;
+}
+
+.logout-btn{
+    text-decoration:none;
+    background:#2563eb;
+    color:white;
+    padding:12px 26px;
+    border-radius:30px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#1d4ed8;
+    transform:translateY(-3px);
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    background:linear-gradient(135deg,#2563eb,#4f8cff);
+
+    color:white;
+
+    text-align:center;
+
+    padding:90px 20px 60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin-top: 20px;
+
+    margin-bottom:20px;
+
+    line-height:1.2;
+
+}
+
+.hero p{
+
+    width:100%;
+
+    max-width:650px;
+
+    margin:0 auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    text-align:center;
+
+}
+
+/* ===========================
+   SEARCH SECTION
+=========================== */
+
+.search-section{
+
+    width:90%;
+    max-width:1200px;
+
+    margin:50px auto;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.search-section input,
+.search-section select{
+
+    width:320px;
+
+    padding:15px 18px;
+
+    border:none;
+    outline:none;
+
+    border-radius:12px;
+
+    background:white;
+
+    font-size:16px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.search-section input:focus,
+.search-section select:focus{
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.25);
+
+}
+
+/* ===========================
+   GROUP SECTION
+=========================== */
+
+.groups{
+
+    width:90%;
+    max-width:1400px;
+
+    margin:70px auto;
+
+}
+
+.groups h2{
+
+    text-align:center;
+
+    font-size:40px;
+
+    color:#1e3a8a;
+
+    margin-bottom:15px;
+
+}
+
+.section-text{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 50px;
+
+    color:#555;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   GROUP CONTAINER
+=========================== */
+
+.group-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* ===========================
+   GROUP CARD
+=========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    min-height:380px;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.18);
+
+}
+
+.card h3{
+
+    color:#2563eb;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    color:#555;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    margin-bottom:10px;
+
+}
+
+.card strong{
+
+    color:#1e3a8a;
+
+}
+
+/* ===========================
+   JOIN BUTTON
+=========================== */
+
+.join-btn{
+
+    margin-top:auto;
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.join-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+   QUOTE
+=========================== */
+
+.quote{
+
+    padding:80px 8%;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    color:white;
+
+    margin-top:40px;
+
+}
+
+.quote h2{
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+}
+
+.quote p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    opacity:.95;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+}
+
+.footer-content h3{
+
+    color:#60a5fa;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    color:#d1d5db;
+
+    margin:8px 0;
+
+}
+
+.footer-content hr{
+
+    width:80%;
+
+    margin:20px auto;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+   SCROLL BUTTONS
+=========================== */
+
+#topBtn,
+#bottomBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+#topBtn{
+
+    bottom:90px;
+
+}
+
+#bottomBtn{
+
+    bottom:25px;
+
+}
+
+#topBtn:hover,
+#bottomBtn:hover{
+
+    background:#1d4ed8;
+
+    transform:scale(1.1);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+.nav-links{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.hero{
+
+    padding-top:180px;
+
+}
+
+.hero h1{
+
+    font-size:40px;
+
+}
+
+.group-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.search-section{
+
+    flex-direction:column;
+
+}
+
+.search-section input,
+.search-section select{
+
+    width:100%;
+    max-width:500px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+
+    font-size:32px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.groups h2{
+
+    font-size:32px;
+
+}
+
+.section-text{
+
+    font-size:16px;
+
+}
+
+.group-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.card{
+
+    padding:25px;
+
+}
+
+.quote h2{
+
+    font-size:30px;
+
+}
+
+.footer-content h3{
+
+    font-size:24px;
+
+}
+
+.footer-content p{
+
+    font-size:15px;
+
+}
+
+}

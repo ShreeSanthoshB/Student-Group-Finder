@@ -1,0 +1,467 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:linear-gradient(135deg,#f8fbff,#eaf3ff,#dcecff);
+    color:#333;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(10px);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo img{
+    width:50px;
+    height:50px;
+}
+
+.logo h2{
+    color:#2563eb;
+    font-size:26px;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:35px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#2563eb;
+}
+
+/* ===========================
+   REGISTER SECTION
+=========================== */
+
+.register-section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:row-reverse;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    padding:120px 8% 80px;
+
+}
+
+/* ===========================
+   FORM (LEFT)
+=========================== */
+
+.register-box{
+
+    width:48%;
+
+    background:rgba(255,255,255,.75);
+
+    backdrop-filter:blur(15px);
+
+    padding:40px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.register-box h2{
+
+    text-align:center;
+
+    color:#2563eb;
+
+    font-size:34px;
+
+    margin-bottom:10px;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#666;
+
+    margin-bottom:25px;
+
+}
+
+.register-box label{
+
+    display:block;
+
+    margin:15px 0 8px;
+
+    font-weight:600;
+
+}
+
+.register-box input,
+.register-box select{
+
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid #d6d6d6;
+
+    border-radius:10px;
+
+    outline:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.register-box input:focus,
+.register-box select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 8px rgba(37,99,235,.2);
+
+}
+
+.options{
+    display: flex;
+    justify-content: center;   /* Centers horizontally */
+    align-items: center;
+    margin: 18px 0;
+}
+
+.options label{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    color: #555;
+}
+
+.options input[type="checkbox"]{
+    width: 16px;
+    height: 16px;
+    accent-color: #2563eb;
+    margin: 0;
+}
+
+button{
+
+    width:100%;
+
+    padding:14px;
+
+    margin-top:10px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.divider{
+
+    text-align:center;
+
+    margin:25px 0;
+
+    color:#777;
+
+}
+
+.login-link{
+
+    text-align:center;
+
+}
+
+.login-link a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.login-link a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================
+   IMAGE (RIGHT)
+=========================== */
+
+.register-left{
+
+    width:48%;
+
+    text-align:center;
+
+}
+
+.register-left img{
+
+    width:100%;
+
+    max-width:500px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+
+}
+
+.register-left h1{
+
+    color:#1e3a8a;
+
+    margin-top:25px;
+
+    font-size:42px;
+
+}
+
+.register-left p{
+
+    margin:20px auto;
+
+    color:#555;
+
+    font-size:18px;
+
+    max-width:450px;
+
+}
+
+.register-highlights{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-top:25px;
+
+}
+
+.register-highlights span{
+
+    background:white;
+
+    padding:10px 18px;
+
+    border-radius:30px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    color:#2563eb;
+
+    font-weight:600;
+
+}
+
+/* ===========================
+   QUOTE
+=========================== */
+
+.quote{
+
+    text-align:center;
+
+    padding:80px 10%;
+
+    background:linear-gradient(135deg,#2563eb,#4f8cff);
+
+    color:white;
+
+}
+
+.quote h2{
+
+    font-size:34px;
+
+    margin-bottom:15px;
+
+}
+
+.quote p{
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+}
+
+.footer-content h3{
+
+    color:#60a5fa;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    color:#d1d5db;
+
+    margin:8px 0;
+
+}
+
+.footer-content hr{
+
+    width:80%;
+
+    margin:20px auto;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:900px){
+
+    .register-section{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:40px;
+
+    }
+
+    .register-box,
+    .register-left{
+
+        width:100%;
+
+    }
+
+    .register-left img{
+
+        max-width:350px;
+
+    }
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:15px;
+
+    }
+
+    .nav-links{
+
+        gap:20px;
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .register-left h1{
+
+        font-size:34px;
+
+    }
+
+}

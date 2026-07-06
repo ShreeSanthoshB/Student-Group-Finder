@@ -1,0 +1,762 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eef4ff;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:rgba(255,255,255,.8);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.logo img{
+
+    width:50px;
+
+    height:50px;
+
+}
+
+.logo h2{
+
+    color:#2563eb;
+
+    font-size:26px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.nav-links a{
+
+    text-decoration:none;
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+.nav-links a:hover,
+.nav-links .active{
+
+    color:#2563eb;
+
+}
+
+.logout-btn{
+
+    text-decoration:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:12px 26px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    margin-top:75px;
+
+    background:linear-gradient(135deg,#2563eb,#4f8dfd);
+
+    color:#fff;
+
+    text-align:center;
+
+    padding:45px 20px;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    font-weight:700;
+
+    margin-bottom:12px;
+
+}
+
+.hero p{
+
+    max-width:700px;
+
+    margin:0 auto;
+
+    font-size:17px;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   STATISTICS
+=========================== */
+
+.statistics{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:60px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+.stat-card{
+
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.18);
+
+}
+
+.stat-card h2{
+
+    color:#2563eb;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+.stat-card p{
+
+    color:#555;
+
+    font-size:18px;
+
+}   
+
+/* ===========================
+   GROUP SECTIONS
+=========================== */
+
+.groups-section{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:70px auto;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+
+}
+
+.section-title h2{
+
+    font-size:38px;
+
+    color:#1e3a8a;
+
+    margin-bottom:12px;
+
+}
+
+.section-title p{
+
+    color:#555;
+
+    font-size:17px;
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   GROUP CONTAINER
+=========================== */
+
+.group-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+    margin-top:30px;
+    justify-items:center;
+}
+
+.group-container p{
+    grid-column:1 / -1;
+    text-align:center;
+    font-size:18px;
+    color:#555;
+    font-weight:500;
+    margin:20px 0;
+}
+
+/* ===========================
+   GROUP CARD
+=========================== */
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:28px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(37,99,235,.18);
+
+}
+
+.card h3{
+
+    color:#2563eb;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.card p{
+
+    margin:10px 0;
+
+    color:#555;
+
+    line-height:1.7;
+
+}
+
+.card strong{
+
+    color:#1e3a8a;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.card button{
+
+    margin-top:25px;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.leave-btn{
+
+    background:#ef4444;
+
+}
+
+.leave-btn:hover{
+
+    background:#dc2626;
+
+    transform:translateY(-3px);
+
+}
+
+.delete-btn{
+
+    background:#2563eb;
+
+}
+
+.delete-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.empty-state{
+
+    display:none;
+
+    text-align:center;
+
+    background:white;
+
+    margin-top:30px;
+
+    padding:45px;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.empty-state h3{
+
+    color:#2563eb;
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+.empty-state p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+    font-size:17px;
+
+}
+
+.action-btn{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:14px 32px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.action-btn:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===========================
+   QUOTE
+=========================== */
+
+.quote{
+
+    margin-top:70px;
+
+    padding:80px 20px;
+
+    text-align:center;
+
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+
+    color:white;
+
+}
+
+.quote h2{
+
+    font-size:38px;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.quote p{
+
+    max-width:750px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    opacity:.95;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px 20px;
+
+}
+
+.footer-content h3{
+
+    color:#60a5fa;
+
+    font-size:30px;
+
+    margin-bottom:15px;
+
+}
+
+.footer-content p{
+
+    margin:10px 0;
+
+    color:#d1d5db;
+
+    font-size:16px;
+
+}
+
+.footer-content hr{
+
+    width:180px;
+
+    margin:20px auto;
+
+    border:none;
+
+    border-top:1px solid rgba(255,255,255,.2);
+
+}
+
+/* ===========================
+   SCROLL BUTTONS
+=========================== */
+
+#topBtn,
+#bottomBtn{
+
+    position:fixed;
+
+    right:25px;
+
+    width:50px;
+
+    height:50px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+
+    transition:.3s;
+
+    z-index:999;
+
+}
+
+#topBtn{
+
+    bottom:90px;
+
+}
+
+#bottomBtn{
+
+    bottom:25px;
+
+}
+
+#topBtn:hover,
+#bottomBtn:hover{
+
+    background:#1d4ed8;
+
+    transform:scale(1.1);
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.statistics{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.group-container{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+.hero h1{
+
+    font-size:44px;
+
+}
+
+.section-title h2{
+
+    font-size:34px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+    padding:20px;
+
+}
+
+.nav-links{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:20px;
+
+}
+
+.hero{
+
+    padding:45px 20px;
+
+}
+
+.hero h1{
+
+    font-size:36px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.statistics{
+
+    grid-template-columns:1fr;
+
+}
+
+.group-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.stat-card{
+
+    padding:30px;
+
+}
+
+.section-title h2{
+
+    font-size:30px;
+
+}
+
+.card{
+
+    padding:24px;
+
+}
+
+.card h3{
+
+    font-size:22px;
+
+}
+
+.quote{
+
+    padding:60px 20px;
+
+}
+
+.quote h2{
+
+    font-size:30px;
+
+}
+
+.quote p{
+
+    font-size:16px;
+
+}
+
+.footer-content h3{
+
+    font-size:26px;
+
+}
+
+.footer-content p{
+
+    font-size:15px;
+
+}
+
+}   
