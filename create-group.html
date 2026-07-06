@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Group | Study Group Finder</title>
+
+    <link rel="stylesheet" href="css/create.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="images/index/logo.png" alt="Logo">
+            <h2>Study Group Finder</h2>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="explore.html">Explore Groups</a></li>
+            <li><a href="my-groups.html">My Groups</a></li>
+            <li><a href="create-group.html" class="active">Create Group</a></li>
+            <li><a href="profile.html">Profile</a></li>
+        </ul>
+
+        <div class="buttons">
+            <a href="index.html" class="logout-btn">Logout</a>
+        </div>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Create a Study Group</h1>
+
+    <p>
+        Bring students together, share knowledge, and build a collaborative learning community.
+    </p>
+
+</section>
+
+<!-- ================= FORM SECTION ================= -->
+
+<section class="form-section">
+
+    <div class="form-header">
+
+        <h2>Create Your Group</h2>
+
+        <p>
+            Fill in the details below to create a new study group.
+        </p>
+
+    </div>
+
+    <form id="groupForm" class="group-form">
+
+        <div class="input-box">
+
+            <label for="groupName">Group Name</label>
+
+            <input
+                type="text"
+                id="groupName"
+                placeholder="Enter group name"
+                required>
+
+        </div>
+
+        <div class="input-box">
+
+            <label for="subject">Subject</label>
+
+            <input
+                type="text"
+                id="subject"
+                placeholder="Enter subject"
+                required>
+
+        </div>
+
+        <div class="input-box">
+
+            <label for="department">Department</label>
+
+            <select id="department" required>
+
+                <option value="">Select Department</option>
+
+                <option>CSE</option>
+
+                <option>IT</option>
+
+                <option>ECE</option>
+
+                <option>EEE</option>
+
+                <option>Mechanical</option>
+
+            </select>
+
+        </div>
+
+        <div class="input-box">
+
+            <label for="mode">Meeting Mode</label>
+
+            <select id="mode" required>
+
+                <option value="">Select Mode</option>
+
+                <option>Online</option>
+
+                <option>Offline</option>
+
+            </select>
+
+        </div>
+
+        <div class="input-box">
+
+            <label for="members">Maximum Members</label>
+
+            <input
+                type="number"
+                id="members"
+                min="2"
+                max="100"
+                placeholder="Enter maximum members"
+                required>
+
+        </div>
+
+        <div class="input-box full-width">
+
+            <label for="description">Group Description</label>
+
+            <textarea
+                id="description"
+                rows="5"
+                placeholder="Describe the purpose of your study group..."
+                required></textarea>
+
+        </div>
+
+        <button type="submit" class="create-btn">
+
+            Create Group
+
+        </button>
+
+    </form>
+
+</section>
+
+<!-- ================= QUOTE ================= -->
+
+<section class="quote">
+
+    <h2>"Every great learning journey begins with one shared idea."</h2>
+
+    <p>
+        Create a study group, inspire collaboration, and help others succeed together.
+    </p>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <h3>Study Group Finder</h3>
+
+        <p>Empowering students through collaborative learning.</p>
+
+        <p>📧 team11@studygroupfinder.com</p>
+
+        <p>📍 ABC Engineering College</p>
+
+        <hr>
+
+        <p>© 2026 Study Group Finder | TEAM 11 | All Rights Reserved</p>
+
+    </div>
+
+</footer>
+
+<!-- ================= SCROLL BUTTONS ================= -->
+
+<button id="topBtn">↑</button>
+
+<button id="bottomBtn">↓</button>
+
+<script src="js/create.js"></script>
+<script src="js/scroll.js"></script>
+
+</body>
+
+</html>
